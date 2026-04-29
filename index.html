@@ -8,6 +8,16 @@
         h1{
             color:aqua
         }
+        #food-title{
+         
+        /* background-color: lightblue; */
+        color: green;
+    
+            
+        }
+        .food .foreign{
+            font-weight: 700;
+        }
     </style>
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -16,11 +26,44 @@
         <h1>This is My Header Banner</h1>
          </header>
      <main>
+        <section id = "old-dhaka" class="songs">
         <h1>Welcome To My Dom</h1>
-        <li>Chattogram</li>
-        <li>Azad Kashmir</li>
-        <li>Karachi</li>
-        <li>Karachi</li>
+        
+        <p>Lorem ipsum dolor <span>oli goli</span> sit amet consectetur adipisicing elit. Illo, corporis?</p>
+
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea debitis eveniet impedit iusto voluptatibus, ipsum quaerat <span>Alias</span>dolores! Excepturi eligendi quam quisquam ducimus aut, voluptas sed laudantium aliquam quae officiis dignissimos.</h1>
+
+        <ul>
+
+        <li>Shafayet</li>
+        <li class="foreign">Bonobash</li>
+        <li>Dom De re Baba</li>
+        <li id ="band">Jalali Set</li>
+
+        </ul>
+        </section>
+       <section class="food">
+        <h1 id = "food-title">Foods I Love</h1>
+        <ul>
+            <li>Rice</li>
+            <li>Dal</li>
+            <li>Potato</li>
+            <li>Lentils</li>
+            <li class="foreign">Burger</li>
+            <li class="foreign">Pizza</li>
+            <li class="foreign">Pasta</li>
+            <li class="international">Dubai</li>
+        </ul>
+       </section>
+        <section id="players-container">
+            <h1>Players</h1>
+            <ul>
+                <li>Messi</li>
+                <li>Pele</li>
+                <li>Ronaldo</li>
+                <li>Embape</li> 
+            </ul>
+        </section>
     </main>
      
     <script>
@@ -34,26 +77,53 @@
 
             study: function(subject){
 
-                console.log('studying subject: ',subject)
+                // console.log('studying subject: ',subject)
             }
         }
 
         const liCollection = document.getElementsByTagName('li');
-        console.log(liCollection);
+        // console.log(liCollection);
         for(const li of liCollection){
 
-            console.log(li.innerText)
+            // console.log(li.innerText)
         }
 
         // al h1 Tags
 
         const allHeadings = document.getElementsByTagName('h1');
         for(const heading of allHeadings){
-            console.log(heading.innerText);
+            // console.log(heading.innerText);
+        }
+
+        const foodTitleH1 = document.getElementById('food-title');
+        // console.log(foodTitleH1.innerText);
+
+        const bandElement = document.getElementById('band');
+
+        bandElement.innerText = 'Jalalis Sleeping Band'
+
+        // get elements by class name
+
+        const foreignElements = document.getElementsByClassName('foreign');
+
+        // console.log(foreignElements);
+
+        for(const element of foreignElements){
+
+            // console.log(element.innerText);
+        }
+
+        const spanElements = document.querySelectorAll('#old-dhaka p span');
+
+        for(const span of spanElements){
+
+            // console.log(span.innerText)
         }
     </script>
    
    <script src="js/Hello.js"></script>
+
+   <script src="js/cssInJs.js"></script>
    
 </body>
 </html>
